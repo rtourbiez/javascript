@@ -1272,6 +1272,24 @@
     $($sidebar[0]).find('ul');
     ```
 
+  - Use native `document.getElementById()` method instead of jQuery's `#` selector. [jsPerf](http://jsperf.com/getelementbyid-vs-jquery-id/13)
+    ```javascript
+    // bad
+    $('#foo').append(items);
+
+    // bad
+    var $foo = $('#foo');
+    $foo.append(items);
+
+    // good
+    $(document.getElementById('foo')).append(items);
+
+    // better (uses caching)
+    var foo = document.getElementById('foo');
+
+    $(foo).append(items);
+    ```
+
     **[[⬆]](#TOC)**
 
 
