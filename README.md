@@ -984,16 +984,6 @@
     });
     ```
 
-  - Prefix your jQuery Objects variables with the $ symbol
-
-    ```javascript
-    // bad
-    var bad = $('#item');
-
-    // good
-    var $good= $('#item');
-    ```
-
   - Use a leading underscore `_` when naming private properties
 
     ```javascript
